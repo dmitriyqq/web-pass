@@ -35,8 +35,8 @@ export const SettingsPage = () => {
             account,
             password,
             domain,
-            color: color.hex,
-            backgroundColor: backgroundColor.hex,
+            color: color.hex || '#111',
+            backgroundColor: backgroundColor.hex || '#FBF8F8',
             accessedAt: Date.now(),
         }, (error) => {
             if (error) {
