@@ -7,8 +7,7 @@ import {firebase} from "../firebase";
 import Button from "../components/Button";
 import {useSnackbar} from "notistack";
 
-export const SettingsPage = (props) => {
-    const [ passwordSettings, setPasswordSettings ] = useState();
+export const SettingsPage = () => {
     const { passwordId } = useParams();
 
     useEffect(() => {
@@ -21,7 +20,7 @@ export const SettingsPage = (props) => {
             setColor(passwordObject?.color ?? '#111');
             setBackgroundColor(passwordObject?.backgroundColor ?? '#FBF8F8');
         })
-    }, []);
+    }, [passwordId]);
 
     const [ domain, setDomain ] = useState('');
     const [ account, setAccount ] = useState('');
